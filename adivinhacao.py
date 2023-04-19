@@ -1,6 +1,7 @@
 import random
 import os
 
+os.system("cls||clear")
 def jogar():
     print("---------------------------------\nBem vindo no jogo de Adivinhação!\n---------------------------------")
     
@@ -12,6 +13,7 @@ def jogar():
     print("(1) Fácil (2) Médio (3) Difícil")
 
     nivel = int(input("Defina o nível: "))
+    os.system("cls||clear")
 
     if nivel == 1:
         totalDeTentativas = 20
@@ -27,6 +29,7 @@ def jogar():
         print("Tentativa {} de {}".format(rodada, totalDeTentativas))
         chute_str = input("Digite um número entre 1 e 100: ")
         chute = int(chute_str)
+        os.system("cls||clear")
         print("Você digitou" , chute_str)
     
         if chute < 1 or chute > 100:

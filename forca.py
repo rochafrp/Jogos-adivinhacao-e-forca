@@ -1,5 +1,7 @@
 import random
+import os
 
+os.system("cls||clear")
 def jogar():
     print("--------------------------------\n--Bem vindo no jogo da forca!--\n--------------------------------")
 
@@ -15,7 +17,7 @@ def jogar():
     numero = random.randrange(0, len(palavras))
     palavraSecreta = palavras[numero].upper()
     letrasAcertadas = ["_" for letra in palavraSecreta] #essa linha faz a mesma função das linhas comentadas abaixo:
-    print(palavraSecreta)
+    
     #letrasAcertadas = []
     #for letra in palavraSecreta:
     #    letrasAcertadas.append("_")
@@ -23,6 +25,8 @@ def jogar():
     enforcou = False
     naoAcertou = False
     erros = 0
+    
+    print("\n", letrasAcertadas)
     
     while not enforcou and not naoAcertou:
         chute = input("\nQual letra? ")
@@ -41,8 +45,10 @@ def jogar():
         print("\n", letrasAcertadas)
         
     if naoAcertou:
+        os.system("cls||clear")
         print("\n", "Você ganhou!!!")
     else:
+        os.system("cls||clear")
         print("\n", "Você perdeu!!!")
         
     print("\n", "Fim de jogo.")
